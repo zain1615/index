@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+    <style>
+        body {
+            background-color: #5f4bb6;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            width: 40%;
+            margin: 20px auto;
+        }
+        table {
+            width: 100%;
+            border-spacing: 8px;
+        }
+        td {
+            vertical-align: top;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 5px;
+        }
+        table.inner-table {
+            background-color: white;
+            color: black;
+            width: 100%;
+            text-align: center;
+        }
+        .center {
+            text-align: left;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tr>
+                <td>FIRST NAME</td>
+                <td><input type="text" maxlength="30" placeholder="(max 30 characters a-z and A-Z)"></td>
+            </tr>
+            <tr>
+                <td>LAST NAME</td>
+                <td><input type="text" maxlength="30" placeholder="(max 30 characters a-z and A-Z)"></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH</td>
+                <td>
+                    Day: <input type="text" size="2"> 
+                    Month: <input type="text" size="2"> 
+                    Year: <input type="text" size="4">
+                </td>
+            </tr>
+            <tr>
+                <td>EMAIL ID</td>
+                <td><input type="email"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER</td>
+                <td><input type="text" maxlength="10" placeholder="(10 digit number)"></td>
+            </tr>
+            <tr>
+                <td>GENDER</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>ADDRESS</td>
+                <td><textarea rows="4" cols="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY</td>
+                <td><input type="text" maxlength="30" placeholder="(max 30 characters a-z and A-Z)"></td>
+            </tr>
+            <tr>
+                <td>PIN CODE</td>
+                <td><input type="text" maxlength="6" placeholder="(6 digit number)"></td>
+            </tr>
+            <tr>
+                <td>STATE</td>
+                <td><input type="text" maxlength="30" placeholder="(max 30 characters a-z and A-Z)"></td>
+            </tr>
+            <tr>
+                <td>COUNTRY</td>
+                <td>
+                    <select name="country">
+                        <option value="India" selected>India</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="USA">USA</option>
+                        <option value="UK">UK</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>HOBBIES</td>
+                <td>
+                    <input type="checkbox"> Drawing
+                    <input type="checkbox"> Singing
+                    <input type="checkbox"> Dancing
+                    <input type="checkbox"> Sketching
+                    <input type="checkbox"> Others
+                </td>
+            </tr>
+            <tr>
+                <td>QUALIFICATION</td>
+                <td>
+                    <table class="inner-table" border="1" cellpadding="5">
+                        <tr>
+                            <th>Sl.No.</th>
+                            <th>Examination</th>
+                            <th>Board</th>
+                            <th>Percentage</th>
+                            <th>Year of Passing</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Class X</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="5"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Class XII</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="5"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Graduation</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="5"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Masters</td>
+                            <td><input type="text" maxlength="10"></td>
+                            <td><input type="text" maxlength="5"></td>
+                            <td><input type="text" maxlength="4"></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>COURSES APPLIED FOR</td>
+                <td>
+                    <input type="checkbox">BCA
+                    <input type="checkbox">B.Com  
+                    <input type="checkbox"> BSC
+                    <input type="checkbox">B.A 
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center">
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
