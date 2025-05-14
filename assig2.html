@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Colored Chess Board</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #222;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(8, 60px);
+      grid-template-rows: repeat(8, 60px);
+      box-shadow: 0 0 10px #000;
+    }
+
+    .square {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: bold;
+      font-family: 'Segoe UI Symbol', 'Noto Sans Symbols', sans-serif;
+    }
+
+    .light {
+      background-color: #f0d9b5; /* Light beige */
+    }
+
+    .dark {
+      background-color: #b58863; /* Brown */
+    }
+  </style>
+</head>
+<body>
+
+<div class="board" id="chessBoard"></div>
+
+<script>
+  const board = document.getElementById('chessBoard');
+  const layout = [
+    ['♜','♞','♝','♛','♚','♝','♞','♜'],
+    ['♟','♟','♟','♟','♟','♟','♟','♟'],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['','','','','','','',''],
+    ['♙','♙','♙','♙','♙','♙','♙','♙'],
+    ['♖','♘','♗','♕','♔','♗','♘','♖']
+  ];
+
+  for (let row = 0; row < 8; row++) {
+    for (let col = 0; col < 8; col++) {
+      const square = document.createElement('div');
+      square.className = 'square ' + ((row + col) % 2 === 0 ? 'light' : 'dark');
+      square.textContent = layout[row][col];
+      board.appendChild(square);
+    }
+  }
+</script>
+
+</body>
+</html>
